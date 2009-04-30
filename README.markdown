@@ -4,10 +4,26 @@ A Library for url pattern matches. Match patterns: http://dev.chromium.org/devel
 
 ## Example
 
-    URLPattern.matches('http://*/*',
-                       'http://example.com/foo.html')   // true
-    URLPattern.matches('https://*/*',
-                       'http://example.com/foo.html')   // false
+Use single pattern.
+
+    URLPattern.matches('http://example.com/*',
+                       'http://example.com/foo.html') // true
+
+    URLPattern.matches('http://example.com/bar*',
+                       'http://example.com/foo.html') // false
+
+    URLPattern.matches('http://*.com/*',
+                       'http://example.com/foo.html') // true
+
+    URLPattern.matches('http://*.com/*',
+                       'http://example.org/foo.html') // false
+
+    URLPattern.matches('https://*.com/*',
+                       'http://example.org/foo.html') //false
+
+
+Use multiple patterns.
+
     var scripts = [
                    {
                        name: 'foo',
