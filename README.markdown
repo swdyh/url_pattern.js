@@ -1,6 +1,6 @@
 # url_pattern.js
 
-A Library for url pattern matches. Match patterns: http://dev.chromium.org/developers/design-documents/extensions/match-patterns
+A Library for url pattern matches. Match patterns: <http://dev.chromium.org/developers/design-documents/extensions/match-patterns>
 
 ## Example
 
