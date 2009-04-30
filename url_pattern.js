@@ -54,7 +54,8 @@ URLPattern.prototype.matches = function(url) {
             var index = hosts[i][0]
             var patternIndex = hosts[i][1]
             var pt = URLPattern.parse([].concat(this.patterns[index])[patternIndex])
-            if (!pt.path || URLPattern.matchesPath(pt.path, u.path)) {
+            if ((pt.scheme == u.scheme) &&
+                (!pt.path || URLPattern.matchesPath(pt.path, u.path))) {
                 result.push(index)
             }
         }
